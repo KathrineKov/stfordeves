@@ -11,9 +11,11 @@ var = {
     'set_var': set_var
 }
 
-user_check = input("Enter the name of the variable that you want to check: ")
+keys_string = ", ".join(var.keys())       # Separate var keys with commas for a cleaner look
+print("Variable names: ", keys_string)    # Give user the keys to choose from
+user_check = input("Enter the name of the variable that you want to check the value of: ")
 
 if user_check in var:
-    print("Variable '{}' is: {}".format(user_check, var[user_check]))
+    print("Variable {} is: {}".format(user_check, var[user_check])) # Removed quotes
 else:
     print("I don't know your variable!")
